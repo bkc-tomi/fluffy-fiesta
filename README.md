@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ゲーム感覚で情報の勉強ができるサイト(タイトル未定)
 
-## Getting Started
+## 目的
 
-First, run the development server:
+情報の問題をゲーム感覚で手軽に解けるようにし、
 
-```bash
-npm run dev
-# or
-yarn dev
+## 概要
+
+ユーザーはステージ選択で解きたいものを選び、クイズをスタートする。
+
+クイズは5問程度で構成されており、クイズのスタートと共にタイム計測がスタートする。1問につき掛かった時間と正誤の結果、問題の難易度を組み合わせてスコアが算出される。
+ユーザーは、スコアが気に入ったものであれば、サーバー側に送信して登録することができる。
+ステージごとに、登録されたスコアからランキングを作成し、表示することができる。
+
+## データフロー
+
+### 問題の取得
+
+```mermaid
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### スコアの登録
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```mermaid
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### スコアの取得
 
-## Learn More
+```mermaid
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ステージ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+章および単元は、学習指導要領に合わせる。
 
-## Deploy on Vercel
+- [ ] 情報社会の問題解決
+  - [ ] 情報やメディアの特性と問題の発見・解決
+  - [ ] 情報セキュリティ
+  - [ ] 情報に関する法規、情報モラル
+  - [ ] 情報社会におけるコミュニケーションのメリット・デメリット
+  - [ ] 情報技術の発展
+- [ ] コミュニケーションと情報デザイン
+  - [ ] デジタルにするということ
+  - [ ] コミュニケーションを成立させるもの
+  - [ ] メディアとコミュニケーション、そのツール
+  - [ ] 情報をデザインすることの意味
+  - [ ] デザインするための一連の進め方
+- [ ] コンピューターとプログラミング
+  - [ ] コンピューターの仕組み
+  - [ ] 外部装置との接続
+  - [ ] 基本的プログラム
+  - [ ] 応用的プログラム
+  - [ ] アルゴリズムの比較
+  - [ ] 確定モデルと確率モデル
+  - [ ] 自然現象のモデル化とシミュレーション
+- [ ] 情報通信ネットワークとデータの活用
+  - [ ] 情報通信ネットワークの仕組み
+  - [ ] 情報通信ネットワークの構築
+  - [ ] 情報システムが提供するサービス
+  - [ ] さまざまな形式のデータとその表現形式
+  - [ ] 量的データの分析
+  - [ ] 質的データの分析
+  - [ ] データの形式と可視化
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅：実装済み
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 章ごとの総合問題
+
+章に関わる単元の問題からランダムに出題される。ランキングが集計され表示される。
+
+### 単元ごと
+
+単元の基礎的な内容が出題される。出題される問題は固定で、出題数は単元によって異なる。スコアは表示されるがランキングは表示されない。
+
+## 問題の形式
+
+問題形式は問題の内容に合わせて以下から選択する。
+
+- [ ] 択一問題（single-choice）
+- [ ] 複数選択問題（multiple-choice）
+- [ ] 並べ替え問題（sort）
+- [ ] 穴埋め問題（fill-in）
+- [ ] 組み合わせ問題（combination）
+- [ ] 筆答問題（written）
+
+✅：実装済み
+
