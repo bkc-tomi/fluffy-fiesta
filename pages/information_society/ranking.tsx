@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Layout from "../../components/common/layout";
+import { useState, useEffect } from "react";
 import Ranking, { RankProps } from "../../components/flame/ranking";
 
 const Dummy: RankProps[] = [
@@ -16,13 +17,18 @@ const Dummy: RankProps[] = [
 ]
 
 const Page: NextPage = () => {
+    const [rank, setRank] = useState(Dummy);
+
+    useEffect(() => {
+        setRank(Dummy);
+    }, []);
 
     return (
         <Layout
             pageTitle="ランキング"
         >
             <Ranking 
-                rankList={ Dummy }
+                rankList={ rank }
                 title="情報社会と問題解決"
             />
         </Layout>

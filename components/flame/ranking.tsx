@@ -1,4 +1,5 @@
 import { MyHeader1 } from "../common/header";
+
 export type RankProps = {
     rank: number,
     name: string,
@@ -10,7 +11,7 @@ const Ranking:React.FC<{rankList: RankProps[], title: string}> = ({
 }) => {
     const clses = [
         "px-24 py-16",
-    ]
+    ];
     return (
         <div>
             <MyHeader1>

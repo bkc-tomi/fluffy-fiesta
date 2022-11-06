@@ -16,7 +16,7 @@ const Layout:NextPage<headProps> = ({ children, pageTitle }) => {
     return (
         <>
             <Head>
-                <title>{ process.env.NEXT_PUBLIC_SITE_NAME } | { pageTitle }</title>
+                <title>{ process.env.NEXT_PUBLIC_SITE_NAME +" | "+ pageTitle }</title>
                 <meta name="description" content={ process.env.NEXT_PUBLIC_DESCRIPTION } />
                 <link rel="icon" href={ `${ process.env.NEXT_PUBLIC_BASE_PATH }/favicon.ico`} />
             </Head>

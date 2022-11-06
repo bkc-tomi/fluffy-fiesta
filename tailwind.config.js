@@ -20,11 +20,16 @@ module.exports = {
       } 
     },
     colors: {
+      transparent: 'transparent',
       butter: "#FEDC3D",
       black: "#000000",
       azure: "#01ABAA",
+      fuchsia: "#c026d3",
       peach: "#FEA680",
       cream: "#F7FFD9",
+      pink: "#ec4899",
+      violet: "#8b5cf6",
+      white: "#f8fafc",
     }
   },
   plugins: [],
