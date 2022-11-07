@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 1500 500">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="Units" value="Points"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs/>
+<g id="レイヤー 1" vectornator:layerName="レイヤー 1" visibility="hidden">
+<path d="M16.3125-86.7812L16.3125+6.03125L1481.53+6.03125L1481.53-86.7812L16.3125-86.7812Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M1481.53+6.03125L1481.53+326.75L1481.53+496.906L1504.47+496.906L1504.47+6.03125L1481.53+6.03125Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M1481.53+496.906L16.3125+496.906L16.3125+574.875L1481.53+574.875L1481.53+496.906Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M16.3125+496.906L16.3125+299.188L16.3125+6.03125L7.1875+6.03125L7.1875+496.906L16.3125+496.906Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M16.3125+299.188C16.3125+390.442+180.546+464.594+382.625+464.594L1176.28+464.594C1344.78+464.594+1481.53+402.841+1481.53+326.75C1481.53+253.967+1356.39+194.963+1197.66+190C1156.14+94.8857+971.163+23.5+748.938+23.5C572.5+23.5+419.251+68.7085+342.938+134.875C159.174+143.697+16.3125+213.998+16.3125+299.188Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M748.938+78.625C908.891+78.625+1046.86+129.897+1078+200.75L1096.31+242.125L1189.72+245.156C1284.96+247.913+1359.44+284.017+1359.44+326.75C1359.44+372.239+1277.02+409.469+1176.28+409.469L382.625+409.469C247.702+409.469+138.406+360.116+138.406+299.188C138.406+242.67+231.816+195.508+355.75+189.719L421.094+186.688L451.625+160.5C509.623+110.048+623.172+78.625+748.938+78.625Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M16.3125+6.03125L16.3125+299.188C16.3125+213.998+159.174+143.697+342.938+134.875C419.251+68.7085+572.5+23.5+748.938+23.5C971.163+23.5001+1156.14+94.8857+1197.66+190C1356.39+194.963+1481.53+253.967+1481.53+326.75L1481.53+6.03125L16.3125+6.03125Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+<path d="M1481.53+326.75C1481.53+402.841+1344.78+464.594+1176.28+464.594L382.625+464.594C180.546+464.594+16.3125+390.442+16.3125+299.188L16.3125+496.906L1481.53+496.906L1481.53+326.75Z" fill-opacity="0.674916" fill="#a7a7a7" opacity="1"/>
+</g>
+<g id="レイヤー 2" vectornator:layerName="レイヤー 2">
+<path d="M749.768+52.0892C598.459+52.0892+461.847+89.8946+392.069+150.594L355.336+182.1L276.721+185.747C127.615+192.713+15.2324+249.454+15.2324+317.45C15.2323+390.753+146.727+450.13+309.054+450.13L1263.91+450.13C1385.1+450.13+1484.27+405.339+1484.27+350.611C1484.27+299.199+1394.66+255.761+1280.08+252.444L1167.7+248.798L1145.67+199.019C1108.21+113.775+942.21+52.0892+749.768+52.0892Z" opacity="1" fill="#f7ffd9"/>
+</g>
+<g id="レイヤー 3" vectornator:layerName="レイヤー 3" visibility="hidden">
+<text x="0" font-family="SignPainter-HouseScriptSemibold" y="0" text-anchor="middle" vectornator:text="fluffy&#xA;" fill="#fedc3d" font-size="453" vectornator:width="1178.03" opacity="1" transform="matrix(1 0 0 1 162.925 2.03337)" vectornator:blendMode="比較（明）">
+<tspan x="597.241" y="317" textLength="896.106">
+fluffy
+</tspan>
+</text>
+</g>
+</svg>
