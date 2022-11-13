@@ -95,9 +95,9 @@ flowchart　LR
 
 問題形式は問題の内容に合わせて以下から選択する。
 
-- [ ] 択一問題（single-choice）
-- [ ] 複数選択問題（multiple-choice）
-- [ ] 並べ替え問題（sort）
+- [x] 択一問題（single-choice）
+- [x] 複数選択問題（multiple-choice）
+- [x] 並べ替え問題（sort）
 - [ ] 穴埋め問題（fill-in）
 - [ ] 組み合わせ問題（combination）
 - [ ] 筆答問題（written）

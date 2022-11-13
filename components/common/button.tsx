@@ -69,17 +69,19 @@ export const RadioButton:React.FC<radioProps> = ({
  */
 export type selectProps = {
     item: string;
+    vals :string[];
     doChoice: (param: string) => void;
 }
 
 export const SelectBox: React.FC<selectProps> = ({
-    item, doChoice,
+    item, doChoice, vals
 }) => {
 
     const clses = [
         "w-full",
-        "block w-full bg-cream px-8 py-6 rounded hover:bg-azure hover:opacity-80 peer-checked:border-azure peer-checked:border-4 text-xl text-black",
+        "block w-full bg-cream px-8 py-6 rounded hover:bg-azure hover:opacity-80 peer-checked:border-azure peer-checked:border-4 text-xl text-black flex",
         "peer hidden",
+        "w-8",
     ];
 
     return (
@@ -91,7 +93,11 @@ export const SelectBox: React.FC<selectProps> = ({
                 onChange={ (e) => doChoice(e.target.value) }
                 className={ clses[2] }
             />
-            <label htmlFor={ item } className={ clses[1] }>{ item }</label>
+            { vals.includes(item)
+                ? <label htmlFor={ item } className={ clses[1] }><div className={ clses[3] }>✅</div>{item}</label>
+                : <label htmlFor={ item } className={ clses[1] }><div className={ clses[3] }></div>{item}</label>
+            
+            }
         </div>
     );
 }
