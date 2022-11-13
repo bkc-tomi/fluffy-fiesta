@@ -19,7 +19,7 @@ export type QuestObject = {
  */
 export type QuizObject = {
     number: number;
-    userAns: string;
+    userAns: string[];
     time: string;
     score: number;
 } & QuestionObject
@@ -36,7 +36,7 @@ export type QuestionObject = {
     paragraph: string;
     paragraphImg?: string;
     choices: string[];
-    correct: string;
+    correct: string[];
     correctScore: number;
     explanation?: string;
 }
