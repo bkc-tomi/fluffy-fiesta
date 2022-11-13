@@ -1,11 +1,14 @@
-export type BtnProps = {
-    btnFunction: (param: string) => void;
-    children: React.ReactNode;
-    value: string;
+/**
+ * ===============================================================
+ * 解答ボタン
+ * ===============================================================
+ */
+export type DoAnsProps = {
+    btnFunction: () => void;
 }
 
-export const ChoiceButton:React.FC<BtnProps> = ({
-    children, btnFunction, value
+export const DoAnsButton:React.FC<DoAnsProps> = ({
+    btnFunction
 }) => {
     const clses = [
         "block w-full bg-azure px-8 py-6 rounded hover:animate-bounce text-xl text-cream",
@@ -13,9 +16,82 @@ export const ChoiceButton:React.FC<BtnProps> = ({
     return (
         <button
             className={ clses[0] }
-            onClick={() => btnFunction(value)}
+            onClick={() => btnFunction()}
         >
-            { children }
+            解答して次へ
         </button>
+    );
+}
+/**
+ * ===============================================================
+ * ラジオボタン
+ * ===============================================================
+ */
+export type radioProps = {
+    item: string;
+    val: string;
+    doChoice: (param: string) => void;
+}
+
+export const RadioButton:React.FC<radioProps> = ({
+    item, val, doChoice
+}) => {
+    const clses = [
+        "w-full",
+        "block w-full bg-cream px-8 py-6 rounded hover:bg-azure hover:opacity-80 peer-checked:border-azure peer-checked:border-4 text-xl text-black flex",
+        "peer hidden",
+        "w-8",
+    ];
+
+    return (
+        <div className={ clses[0]}>
+            <input 
+                id={ item }
+                className={ clses[2] }
+                type="radio"
+                value={item}
+                onChange={(e) => doChoice(e.target.value) }
+                checked={item === val}
+            />
+            {item === val 
+                ? <label htmlFor={ item } className={ clses[1] }><div className={ clses[3] }>✅</div>{item}</label>
+                : <label htmlFor={ item } className={ clses[1] }><div className={ clses[3] }></div>{item}</label>
+            
+            }
+        </div>
+    );
+}
+
+/**
+ * ===============================================================
+ * セレクトボタン
+ * ===============================================================
+ */
+export type selectProps = {
+    item: string;
+    doChoice: (param: string) => void;
+}
+
+export const SelectBox: React.FC<selectProps> = ({
+    item, doChoice,
+}) => {
+
+    const clses = [
+        "w-full",
+        "block w-full bg-cream px-8 py-6 rounded hover:bg-azure hover:opacity-80 peer-checked:border-azure peer-checked:border-4 text-xl text-black",
+        "peer hidden",
+    ];
+
+    return (
+        <div className={ clses[0] }>
+            <input
+                type="checkbox"
+                id={item}
+                value={ item }
+                onChange={ (e) => doChoice(e.target.value) }
+                className={ clses[2] }
+            />
+            <label htmlFor={ item } className={ clses[1] }>{ item }</label>
+        </div>
     );
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { QuestObject } from "../libs/quizObject";
 import { JSONToOBJ } from "../libs/commons";
 import { ResultTable } from "../components/common/table";
+
 const Page: NextPage = () => {
     const [questObj, setQuestObj] = useState<QuestObject>();
 

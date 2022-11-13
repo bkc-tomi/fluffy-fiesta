@@ -9,14 +9,6 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const Dummy:QuestionObject[] = [
-    {type: 1,paragraph: "これは最初の問題です。", paragraphImg: "https://images.pexels.com/photos/12785681/pexels-photo-12785681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", choices: ["A", "B", "C", "D"], correct: "A", correctScore: 5},
-    {type: 1,paragraph: "これは2番目の問題です。", choices: ["A", "B", "C", "D"], correct: "B", correctScore: 5},
-    {type: 1,paragraph: "これは3番目の問題です。", choices: ["A", "B", "C", "D"], correct: "C", correctScore: 5},
-    {type: 1,paragraph: "これは4番目の問題です。", choices: ["A", "B", "C", "D"], correct: "D", correctScore: 5},
-    {type: 1,paragraph: "これは最後の問題です。", choices: ["A", "B", "C", "D"], correct: "A", correctScore: 5},
-]
-
 const Page: NextPage = () => {
     const router = useRouter();
 
@@ -70,7 +62,7 @@ const Page: NextPage = () => {
                         for (let i = 0; i < datas.length; i++) {
                             var temp:QuizObject = {
                                 number: i + 1,
-                                userAns: "",
+                                userAns: [],
                                 time: "",
                                 score: 0,
                                 type: datas[i].type,

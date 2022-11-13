@@ -47,10 +47,10 @@ export const ResultTable:React.FC<ResultProps> = ({
             </TableCol>
             <div className={ clses[3] }>
                 <TableCol header="あなたの解答" ratio={2}>
-                    { quizObj.userAns }
+                    { quizObj.type == 3 ? quizObj.userAns.join("→") : quizObj.userAns.join(", ") }
                 </TableCol>
                 <TableCol header="正解" ratio={2}>
-                    { quizObj.correct }
+                    { quizObj.type == 3 ? quizObj.correct.join("→") : quizObj.correct.join(", ") }
                 </TableCol>
             </div>
             <TableCol header="得点" ratio={1}>
