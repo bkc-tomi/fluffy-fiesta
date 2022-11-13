@@ -34,10 +34,10 @@ const Page: NextPage = () => {
                 return;
             } else {
                 const response = await supabase
-                .from('questions')
+                .from('random_questions')
                 .select("*")
                 .eq('sub_cat', questionID)
-                .limit(6);
+                .limit(5);
                 
                 if (response.error) {
                     // データベースとの接続が上手く行かなかった場合 ======================
