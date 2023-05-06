@@ -25,7 +25,7 @@ const Page: NextPage = () => {
 
     return (
         <Layout
-            pageTitle="ランキング"
+            pageTitle="【情報社会と問題解決】ランキング"
         >
             <Ranking 
                 rankList={ rank }
