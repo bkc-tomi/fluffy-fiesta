@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <SmallCardList
         list={[
           { url: "/", emoji: "⚔️", title: "Quest", state: false },
-          { url: "/information_society/ranking", emoji: "🏆", title: "Ranking", state: false },
+          { url: "/information_society/ranking", emoji: "🏆", title: "Ranking", state: true },
         ]}
       />
 
