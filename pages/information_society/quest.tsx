@@ -29,12 +29,12 @@ const Page: NextPage = () => {
     });
     const [quizNum, setQuizNum] = useState<string>("/");
 
-    // ブラウザバックの禁止
-
-    // リロードの禁止
-
     // 問題のロード =========================================================
     useEffect(() => {
+        // ブラウザバックの禁止
+        
+        // リロードの禁止
+        
         const url = new URL(location.href);
         const qID:number = Number(url.searchParams.get("qID"));
 
