@@ -17,10 +17,16 @@ const Page: NextPage = () => {
     useEffect(() => {
         const url = new URL(location.href);
         const questionID = url.searchParams.get("questionID");
+        const category = url.searchParams.get("category");
         console.log("qID: " + questionID);
         // questionID == undefinedの時の処理 ==================
         if (questionID == undefined) {
             router.push("/error?errMsg=問題が指定されていませんでした。");
+            return;
+        }
+        // category == undefinedの時の処理 ==================
+        if (category == undefined) {
+            router.push("/error?errMsg=カテゴリーが指定されていませんでした。");
             return;
         }
         
@@ -33,6 +39,7 @@ const Page: NextPage = () => {
                 router.push("/error?errMsg=データベースとの接続に問題が発生しました。トップに戻ってやり直してください。");
                 return;
             } else {
+                // **** カテゴリーでデータ取得できるように変更する。 *****
                 const response = await supabase
                 .from('random_questions')
                 .select("*")
@@ -79,7 +86,7 @@ const Page: NextPage = () => {
                         window.sessionStorage.removeItem("questObj");
                         window.sessionStorage.setItem("questObj", JSON.stringify(questObj));
                         // ページ遷移
-                        router.push("/question?qID=1");
+                        router.push(`/${ category }/quest?qID=1`);
                     }
                 }
             }

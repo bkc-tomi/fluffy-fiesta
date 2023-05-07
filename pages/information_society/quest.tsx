@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import Layout from "../components/common/layout";
+import Layout from "../../components/common/layout";
 import { useState, useEffect } from "react";
-import { QuestObject, QuizObject,  } from "../libs/quizObject";
-import { JSONToOBJ, ShuffleArray } from "../libs/commons";
-import { SingleChoice, MultipleChoice, SortChoice } from "../components/flame/question";
+import { QuestObject, QuizObject,  } from "../../libs/quizObject";
+import { JSONToOBJ, ShuffleArray } from "../../libs/commons";
+import { SingleChoice, MultipleChoice, SortChoice } from "../../components/flame/question";
 
 const Page: NextPage = () => {
     const router = useRouter();
@@ -29,12 +29,12 @@ const Page: NextPage = () => {
     });
     const [quizNum, setQuizNum] = useState<string>("/");
 
-    // ブラウザバックの禁止
-
-    // リロードの禁止
-
     // 問題のロード =========================================================
     useEffect(() => {
+        // ブラウザバックの禁止
+        
+        // リロードの禁止
+        
         const url = new URL(location.href);
         const qID:number = Number(url.searchParams.get("qID"));
 
@@ -83,7 +83,7 @@ const Page: NextPage = () => {
                             questObj={ questObj }
                             quiz={ quiz }
                             quizNum={ quizNum }
-                            locate="/question"
+                            locate="/information_society/quest"
                         />
                     </Layout>
                 );
@@ -97,7 +97,7 @@ const Page: NextPage = () => {
                             questObj={ questObj }
                             quiz={ quiz }
                             quizNum={ quizNum }
-                            locate="/question"
+                            locate="/information_society/quest"
                         />
                     </Layout>
                 );
@@ -111,7 +111,7 @@ const Page: NextPage = () => {
                             questObj={ questObj }
                             quiz={ quiz }
                             quizNum={ quizNum }
-                            locate="/question"
+                            locate="/information_society/quest"
                         />
                     </Layout>
                 );

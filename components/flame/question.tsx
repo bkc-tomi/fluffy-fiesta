@@ -19,6 +19,7 @@ export type QuizProps = {
     questObj: QuestObject;
     quiz: QuizObject;
     quizNum: string;
+    locate: string;
 }
 
 /**
@@ -27,7 +28,7 @@ export type QuizProps = {
  * ===============================================================
  */
 export const SingleChoice:React.FC<QuizProps> = ({
-    questObj, quiz, quizNum
+    questObj, quiz, quizNum, locate
 }) => {
     
     const [userChoice, setUserChoice] = useState<string>("");
@@ -67,7 +68,7 @@ export const SingleChoice:React.FC<QuizProps> = ({
             window.sessionStorage.setItem("questObj", JSON.stringify(temp));
         }
         if (temp && temp.quizList.length > qID) {
-            location.href = `/question?qID=${qID + 1}`;
+            location.href = `${ locate }?qID=${qID + 1}`;
             return;
         } else {
             location.href = "/post";
@@ -144,7 +145,7 @@ export const SingleChoice:React.FC<QuizProps> = ({
  * ===============================================================
  */
 export const MultipleChoice:React.FC<QuizProps> = ({
-    questObj, quiz, quizNum
+    questObj, quiz, quizNum, locate
 }) => {
 
     const [itemData, setItemData] = useState(quiz.choices.map(c => {
@@ -202,7 +203,7 @@ export const MultipleChoice:React.FC<QuizProps> = ({
             window.sessionStorage.setItem("questObj", JSON.stringify(temp));
         }
         if (temp && temp.quizList.length > qID) {
-            location.href = `/question?qID=${qID + 1}`;
+            location.href = `${ locate }?qID=${qID + 1}`;
             return;
         } else {
             location.href = "/post";
@@ -284,7 +285,7 @@ type questionType = {
 }
 
 export const SortChoice:React.FC<QuizProps> = ({
-    questObj, quiz, quizNum
+    questObj, quiz, quizNum, locate
 }) => {
     const [questions, setQuestions] = useState<questionType[]>(quiz.choices.map((c, index) => {
         return {id: index, item: c};
@@ -321,7 +322,7 @@ export const SortChoice:React.FC<QuizProps> = ({
             window.sessionStorage.setItem("questObj", JSON.stringify(temp));
         }
         if (temp && temp.quizList.length > qID) {
-            location.href = `/question?qID=${qID + 1}`;
+            location.href = `${ locate }?qID=${qID + 1}`;
             return;
         } else {
             location.href = "/post";
